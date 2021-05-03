@@ -1,9 +1,9 @@
-package com.github.michaelboyles.dgs.it;
+package com.github.magnusheino.dgs.it;
 
 import org.junit.Test;
 
-import com.github.michaeboyles.dgs.generated.DgsConstants;
-import com.github.michaeboyles.dgs.generated.types.Person;
+import com.github.magnusheino.dgs.generated.DgsConstants;
+import com.github.magnusheino.dgs.generated.types.Person;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

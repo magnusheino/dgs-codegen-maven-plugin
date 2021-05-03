@@ -1,4 +1,4 @@
-package com.github.michaeboyles.dgs;
+package com.github.magnusheino.dgs;
 
 import com.netflix.graphql.dgs.codegen.CodeGen;
 import com.netflix.graphql.dgs.codegen.CodeGenConfig;
@@ -81,6 +81,15 @@ public class GenerateMojo extends AbstractMojo
     @Parameter
     private boolean generateInterfaces = false;
 
+    @Parameter
+    private boolean omitNullInputFields = false;
+
+    @Parameter
+    private boolean kotlinAllFieldsOptional = false;
+
+    @Parameter
+    private boolean snakeCaseConstantNames = false;
+
     @Parameter(defaultValue = "${project}")
     private MavenProject project;
 
@@ -98,26 +107,29 @@ public class GenerateMojo extends AbstractMojo
         }
 
         CodeGenConfig config = new CodeGenConfig(
-            Collections.emptySet(),
-            schemaPaths,
-            getCanonicalFile(outputDir).toPath(),
-            getCanonicalFile(examplesOutputDir).toPath(),
-            true,
-            packageName,
-            subPackageNameClient,
-            subPackageNameDatafetchers,
-            subPackageNameTypes,
-            Language.valueOf(language.toUpperCase()),
-            generateBoxedTypes,
-            generateClient,
-            generateInterfaces,
-            typeMapping,
-            new HashSet<>(includeQueries),
-            new HashSet<>(includeMutations),
-            skipEntityQueries,
-            shortProjectionNames,
-            generateDataTypes,
-            maxProjectionDepth
+                Collections.emptySet(),
+                schemaPaths,
+                getCanonicalFile(outputDir).toPath(),
+                getCanonicalFile(examplesOutputDir).toPath(),
+                true,
+                packageName,
+                subPackageNameClient,
+                subPackageNameDatafetchers,
+                subPackageNameTypes,
+                Language.valueOf(language.toUpperCase()),
+                generateBoxedTypes,
+                generateClient,
+                generateInterfaces,
+                typeMapping,
+                new HashSet<>(includeQueries),
+                new HashSet<>(includeMutations),
+                skipEntityQueries,
+                shortProjectionNames,
+                generateDataTypes,
+                omitNullInputFields,
+                maxProjectionDepth,
+                kotlinAllFieldsOptional,
+                snakeCaseConstantNames
         );
 
         getLog().info("Codegen config: " + config);

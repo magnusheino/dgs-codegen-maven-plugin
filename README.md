@@ -10,7 +10,7 @@ Add the following plugin to your Maven build:
 
 ```xml
 <plugin>
-    <groupId>com.github.michaelboyles</groupId>
+    <groupId>com.github.magnusheino</groupId>
     <artifactId>dgs-codegen-maven-plugin</artifactId>
     <version>1.1.0</version>
     <executions>
