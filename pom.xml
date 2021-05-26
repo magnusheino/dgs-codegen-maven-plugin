@@ -6,7 +6,7 @@
 
     <groupId>com.github.magnusheino</groupId>
     <artifactId>dgs-codegen-maven-plugin</artifactId>
-    <version>2.0.1</version>
+    <version>4.6.4.1</version>
     <packaging>maven-plugin</packaging>
 
     <properties>
@@ -49,7 +49,7 @@
         <dependency>
             <groupId>com.netflix.graphql.dgs.codegen</groupId>
             <artifactId>graphql-dgs-codegen-core</artifactId>
-            <version>4.6.0</version>
+            <version>4.6.4</version>
         </dependency>
     </dependencies>
 

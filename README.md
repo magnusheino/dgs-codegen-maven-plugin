@@ -12,7 +12,7 @@ Add the following plugin to your Maven build:
 <plugin>
     <groupId>com.github.magnusheino</groupId>
     <artifactId>dgs-codegen-maven-plugin</artifactId>
-    <version>2.0.1</version>
+    <version>4.6.4.1</version>
     <executions>
         <execution>
             <goals>
