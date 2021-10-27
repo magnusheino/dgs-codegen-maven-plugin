@@ -6,7 +6,7 @@
 
     <groupId>com.github.magnusheino</groupId>
     <artifactId>dgs-codegen-maven-plugin</artifactId>
-    <version>5.1.2.2</version>
+    <version>5.1.2.3</version>
     <packaging>maven-plugin</packaging>
 
     <properties>
